@@ -2,6 +2,9 @@
 updatePage();
 
 function updatePage(){
+    //Save button is disabled until user input
+    $('.saveBtn').prop('disabled', true);
+
     var date = dayjs().format('MMMM D YYYY');
     var today = $("#today");
     today.text(date);
@@ -48,4 +51,13 @@ $('.saveBtn').click( function(){
     var eventField = $(this).parent().prev().children().first();
     var hourValueOfEventField = eventField.prop('id');
     localStorage.setItem(hourValueOfEventField, eventField.val());
+    $(this).prop('disabled', true);
+});
+
+$('.eventField').children().keyup( function(e){
+    var closestSaveBtn = $(this).parent().next('.save').children('.saveBtn');
+    if(closestSaveBtn.prop('disabled'))
+    {
+        closestSaveBtn.prop('disabled', false);
+    }
 });

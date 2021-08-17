@@ -66,6 +66,11 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
+.saveBtn:disabled,
+.saveBtn[disabled]{
+  background-color: gray;
+}
+
 .eventField{
   padding: 1px;
   width: 90%;
