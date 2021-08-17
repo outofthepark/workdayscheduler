@@ -4,4 +4,4 @@ This lets the user schedule their day and saves events in local storage. Past ho
 ## Deployment
 https://outofthepark.github.io/workdayscheduler/
 
-![Screen shot of deployed applicationn](https://user-images.githubusercontent.com/42618949/129778454-2a0de078-2843-4a5a-b7b8-28b567f597d5.png "Work Day Scheduler")
+![Screen shot of deployed applicationn](https://user-images.githubusercontent.com/42618949/129778812-37ed60d0-9c36-4a4c-ad66-73972489a5f8.png "Work Day Scheduler")
