@@ -2,8 +2,8 @@
 updatePage();
 
 function updatePage(){
-    //Save button is disabled until user input
-    $('.saveBtn').prop('disabled', true);
+    //Set save button text 'unlock'
+    //$('.saveBtn').text('\u1F513');
 
     var date = dayjs().format('MMMM D YYYY');
     var today = $("#today");
@@ -51,13 +51,13 @@ $('.saveBtn').click( function(){
     var eventField = $(this).parent().prev().children().first();
     var hourValueOfEventField = eventField.prop('id');
     localStorage.setItem(hourValueOfEventField, eventField.val());
-    $(this).prop('disabled', true);
+    $(this).children('.lockImage').attr('src', './assets/images/lock.png');
 });
 
 $('.eventField').children().keyup( function(e){
-    var closestSaveBtn = $(this).parent().next('.save').children('.saveBtn');
-    if(closestSaveBtn.prop('disabled'))
+    var closestSaveBtnImg = $(this).parent().next('.save').children('.saveBtn').children('.lockImage');
+    if(closestSaveBtnImg.attr('src') == './assets/images/lock.png')
     {
-        closestSaveBtn.prop('disabled', false);
+        closestSaveBtnImg.attr('src', './assets/images/unlock.png');
     }
 });

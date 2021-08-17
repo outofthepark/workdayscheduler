@@ -58,17 +58,12 @@ textarea{
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
-  height: 50px;
+  height: 60px;
 }
 
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
-}
-
-.saveBtn:disabled,
-.saveBtn[disabled]{
-  background-color: gray;
 }
 
 .eventField{
@@ -106,4 +101,10 @@ textarea{
 
 :focus {
   outline: none !important;
+}
+
+.lockImage {
+  width: 45px;
+  height: 45px;
+  padding: 5px;
 }
