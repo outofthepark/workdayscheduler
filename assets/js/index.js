@@ -2,8 +2,6 @@
 updatePage();
 
 function updatePage(){
-    //Set save button text 'unlock'
-    //$('.saveBtn').text('\u1F513');
 
     var date = dayjs().format('MMMM D YYYY');
     var today = $("#today");
